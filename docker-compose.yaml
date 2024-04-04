@@ -10,6 +10,7 @@ services:
     volumes:
       - ./materialization/:/docker-entrypoint-initdb.d/
       - clickhouse-data:/var/lib/clickhouse/
+      - ./config_files/clickhouse/etc/clickhouse-server:/etc/clickhouse-server
       - ./clickhouse-logs:/var/log/clickhouse-server/
     ports:
       - 8123:8123 # http
